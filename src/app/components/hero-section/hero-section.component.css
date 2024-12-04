@@ -1,0 +1,82 @@
+.hero-section {
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex; /* Use Flexbox for side-by-side layout */
+      justify-content: space-between; /* Add space between the containers */
+      align-items: flex-start; /* Align items at the top */
+    }
+  
+    .left-square {
+      width: 720px;
+      height: 720px;
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #fff;
+  
+      h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  
+    .right-squares {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+  
+      .square {
+        width: 360px;
+        height: 360px;
+        border-bottom: 1px solid #000000;
+        border-right: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        text-align: center;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .left-square,
+      .right-squares .square {
+        width: 100%; /* Full width on smaller screens */
+        height: auto;
+      }
+  
+      .right-squares {
+        gap: 10px;
+      }
+    }
+  }
+  
