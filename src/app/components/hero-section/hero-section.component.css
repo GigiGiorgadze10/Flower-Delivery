@@ -39,6 +39,30 @@
       span{
         font-weight: 100;
       }
+
+      .left-square-bottom{
+        border-top: 1px solid black;
+        padding-top: 30px;
+        display: flex;
+      }
+
+      .left-square-bottom {
+        display: flex;
+        align-items: flex-end; /* Align content to the bottom */
+      }
+      
+      .left-square-bottom img{
+        border-right: 1px solid black;
+        padding-right: 30px;
+      }
+
+      .left-square-bottom-right{
+        padding-left: 30px;
+      }
+
+      .left-square-bottom-right p{
+        font-size: 14px;
+      }
     }
   
     .right-squares {
@@ -48,8 +72,8 @@
       .square {
         width: 360px;
         height: 360px;
-        border-bottom: 1px solid #000000;
         border-right: 1px solid black;
+        border-bottom: 1px solid black;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -60,10 +84,10 @@
         img {
           max-width: 100%;
           height: auto;
-          margin-bottom: 10px;
         }
   
         p {
+          font-family: sans-serif;
           font-size: 16px;
           font-weight: bold;
         }
