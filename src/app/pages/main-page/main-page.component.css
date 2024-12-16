@@ -534,3 +534,114 @@
       font-size: 50px;
     }
 }
+
+
+.seventh-section{
+  .container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex; /* Use Flexbox for side-by-side layout */
+  }
+
+  .left-square img{
+    width: 720px; /* Set the width to 720px */
+    height: 640px; /* Set the height to 720px */
+    border-right: 1px solid black;
+    object-fit: cover; /* Ensure the image covers the dimensions while maintaining aspect ratio */
+    display: block; /* Ensure the image doesn't have extra inline spacing */
+  }
+
+  .right-square{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+    width: 720px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+
+    .up{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      h1{
+        font-size: 50px;
+      }
+
+      .service{
+        font-size: 14px;
+      }
+
+      p{
+        font-size: 18px;
+      }
+
+    }
+
+    button{
+      background: none;
+      border: 1px solid black;
+      height: 56px;
+      width: 180px;
+      font-size: 16px;
+    }
+  }
+}
+
+.eighth-section{
+  max-width: 1438px;
+  margin: 0 auto;
+  display: flex; 
+  border: 1px solid black;
+  border-top: none;
+  height: 720px;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../../../public/assets/images/bde4b946c7d6be8278be8f0412c7d02a.png);
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-family: sans-serif;
+    color: #fff;
+
+    .up{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+  
+      h1{
+        font-size: 50px;
+      }
+  
+      .service{
+        font-size: 14px;
+      }
+  
+      p{
+        font-size: 18px;
+      }
+  
+    }
+  
+    button{
+      background: none;
+      border: 1px solid rgb(255, 255, 255);
+      height: 56px;
+      width: 180px;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+}
