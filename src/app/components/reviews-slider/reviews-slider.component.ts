@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ReviewsService } from '../../services/reviews.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-reviews-slider',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './reviews-slider.component.html',
   styleUrl: './reviews-slider.component.css'
 })

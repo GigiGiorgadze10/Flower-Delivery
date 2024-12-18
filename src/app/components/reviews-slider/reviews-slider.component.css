@@ -1,9 +1,12 @@
 .slider-section{
     max-width: 1438px;
     border: 1px solid black;
+    border-bottom: none;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    height: 580px;
+    display: flex;
 }
 
 .slider-container {
@@ -93,5 +96,6 @@
   
   .read-reviews-btn:hover {
     background-color: #444;
+    color: white;
   }
   

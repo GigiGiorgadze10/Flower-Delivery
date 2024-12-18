@@ -1,0 +1,139 @@
+.footer-section{
+    font-family: sans-serif;
+    margin: 0 auto;
+    border-top: 1px solid black; /* Full-width border on top */
+    width: 100%; /* Ensures it spans the entire screen width */
+    max-width: 100%; /* Overrides any constraints */
+    
+    .container{
+        display: flex;
+        margin: 0 auto;
+        height: 430px;
+        max-width: 1438px; /* Keeps the main container content centered */
+        border: 1px solid black; /* Optional for the container */
+        border-top: none; /* Remove border-top from the container */
+
+     
+
+        .first-container {
+            border-right: 1px solid black;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 359px;    
+            border-right: 1px solid black;
+     
+        }
+          
+          .first {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            gap: 30px;
+          
+          }
+          
+          .first p {
+            font-size: 16px;
+      
+          }
+          
+          .first input {
+            width: 261px; /* Ensure the input takes full width */
+            height: 52px;
+            padding-left: 15px;
+            font-size: 14px;
+          }
+          
+          .first button {
+            width: 280px;
+            height: 56px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+          }
+          
+          .first button:hover {
+            background-color: darkgray; /* Optional hover effect */
+          }
+          
+        .second-container{
+            align-items: center;
+            display: flex;
+            margin-left: 40px;
+            width: 359px;    
+            border-right: 1px solid black;
+
+            .second{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+                h2{
+                    color: #808080;
+                    font-size: 21px;
+                }
+                h3{
+                    color: #808080;
+                    font-size: 14px;
+                }
+                p{
+                    font-size: 16px;
+                }
+                .address{
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    display: flex;
+                  }
+            }
+        }
+
+        .third-container{
+            align-items: center;
+            display: flex;
+            margin-left: 40px;
+            width: 359px;    
+            border-right: 1px solid black;
+
+            .third{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+                h2{
+                    color: #808080;
+                    font-size: 21px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .fourth-container{
+            margin-top: 70px;
+            display: flex;
+            margin-left: 40px;
+            width: 359px;    
+
+            .fourth{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                
+                h2{
+                    color: #808080;
+                    font-size: 21px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+    }
+}
