@@ -1,31 +1,27 @@
 <header class="header">
-    <div class="header-container">
-      <!-- Left menu items -->
-      <nav class="menu-left">
-        <ul>
-          <li class="Shop"><a routerLink="/">Shop</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-        </ul>
-      </nav>
-  
-      <!-- Right menu items -->
-      <nav class="menu-right">
-        <ul>
-          <li class="SignIn"><a routerLink="/signin">Sign In</a></li>
-          <li><a routerLink="/cart">Cart</a></li>
-        </ul>
-      </nav>
-  
-      <!-- Responsive burger menu -->
-      <button class="menu-toggle" (click)="toggleMenu()">☰</button>
-      <nav class="responsive-menu" [class.active]="menuOpen">
-        <ul>
-          <li><a routerLink="/">Shop</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-          <li><a routerLink="/signin">Sign In</a></li>
-          <li><a routerLink="/cart">Cart</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
+  <div class="header-container">
+    <nav class="menu-left">
+      <ul>
+        <li class="Shop"><a routerLink="/">Shop</a></li>
+        <li><a (click)="scrollToContact()">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="menu-right">
+      <ul>
+        <li class="SignIn"><a routerLink="/signin">Sign In</a></li>
+        <li><a routerLink="/cart">Cart</a></li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+    <nav class="responsive-menu" [class.active]="menuOpen">
+      <ul>
+        <li><a routerLink="/">Shop</a></li>
+        <li><a (click)="scrollToContact()">Contact</a></li>
+        <li><a routerLink="/signin">Sign In</a></li>
+        <li><a routerLink="/cart">Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-info',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './info.component.css'
 })
 export class InfoComponent {
+  @ViewChild('contactSection', { static: false }) contactSection!: ElementRef;
 
+  scrollToContact() {
+    if (this.contactSection) {
+      this.contactSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

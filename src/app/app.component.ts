@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
@@ -13,4 +13,12 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent {
   title = 'FlowerDelivery';
+
+  @ViewChild(MainPageComponent) mainPageComponent!: MainPageComponent;
+
+  onContactClicked() {
+    if (this.mainPageComponent) {
+      this.mainPageComponent.scrollToContact();
+    }
+  }
 }
