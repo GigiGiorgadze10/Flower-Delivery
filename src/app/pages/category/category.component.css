@@ -1,203 +1,82 @@
-.hero-section {
+.main-container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 
-    .container {
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex; /* Use Flexbox for side-by-side layout */
-      justify-content: space-between; /* Add space between the containers */
-      align-items: flex-start; /* Align items at the top */
-    }
-  
-    .left-square {
-      width: 720px;
-      height: 720px;
-      border-right: 1px solid #000000;
-      border-bottom: 1px solid black;
-      border-left: 1px solid black;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: #fff;
-  
-      h1 {
-        font-size: 67px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: left;
-        font-family: sans-serif;
-      }
-  
-      p {
-        font-size: 18px;
-        line-height: 1.5;
-        text-align: left;
-        font-family: sans-serif;
-      }
-
-      span{
-        font-weight: 100;
-      }
-
-      .left-square-bottom{
-        border-top: 1px solid black;
-        padding-top: 30px;
-        display: flex;
-      }
-
-      .left-square-bottom {
-        display: flex;
-        align-items: flex-end; /* Align content to the bottom */
-      }
-      
-      .left-square-bottom img{
-        border-right: 1px solid black;
-        padding-right: 30px;
-      }
-
-      .left-square-bottom-right{
-        padding-left: 30px;
-      }
-
-      .left-square-bottom-right p{
-        font-size: 14px;
-      }
-    }
-  
-    .right-squares {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
-      
-      .square {
-        width: 360px;
-        height: 360px;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-        position: relative; /* Enables absolute positioning of child elements */
-        display: flex;
-        justify-content: center; /* Center the h1 horizontally */
-        align-items: center; /* Center the h1 vertically */
-        background: #fff;
-        text-align: center;
-        
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-    
-        h1 {
-          font-size: 38px;
-          font-family: sans-serif;
-          position: absolute; /* Center using position */
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          white-space: nowrap;
-        }
-    
-        a {
-          font-family: sans-serif;
-          font-size: 16px;
-          font-weight: bold;
-          position: absolute; /* Place at the bottom */
-          bottom: 20px; /* Add spacing from the bottom */
-          left: 50%;
-          transform: translateX(-50%);
-          text-decoration: none;
-          color: #000000;
-        }
-      }
-    }
-    
-  
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .left-square,
-      .right-squares .square {
-        width: 100%; /* Full width on smaller screens */
-        height: auto;
-      }
-  
-      .right-squares {
-        gap: 10px;
-      }
-    }
-  }
-  
-  .second-section {
-    .container {
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex; /* Use Flexbox for side-by-side layout */
-      justify-content: space-between; /* Add space between the containers */
-      align-items: flex-start; /* Align items at the top */
-    }
-  
-    .left-square-second {
-      width: 720px;
-      height: 1082px;
-      border-right: 1px solid #000000;
-      border-bottom: 1px solid black;
-      border-left: 1px solid black;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: #fff;
-    }
-  
-    .right-squares-second {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
-      
-      .square {
-        width: 360px;
-        height: 360px;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-        position: relative; /* Enables absolute positioning of child elements */
-        display: flex;
-        justify-content: center; /* Center the h1 horizontally */
-        align-items: center; /* Center the h1 vertically */
-        background: #fff;
-        overflow: hidden; /* Ensure images don’t overflow the square */
-        text-align: center;
-        
-        img {
-          width: 100%; /* Make the image span the full width */
-          height: 100%; /* Make the image span the full height */
-          object-fit: cover; /* Ensures the image fills the square while maintaining aspect ratio */
-        }
-  
-        h1 {
-          font-size: 38px;
-          font-family: sans-serif;
-          position: absolute; /* Center using position */
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          white-space: nowrap;
-          z-index: 2; /* Ensure it appears on top of the image */
-        }
-  
-        a {
-          font-family: sans-serif;
-          font-size: 16px;
-          font-weight: bold;
-          position: absolute; /* Place at the bottom */
-          bottom: 20px; /* Add spacing from the bottom */
-          left: 50%;
-          transform: translateX(-50%);
-          text-decoration: none;
-          color: #000000;
-          z-index: 2; /* Ensure it appears on top of the image */
-        }
-      }
-    }
 }
+
+.left-container {
+  width: 720px;
+  height: 720px;
+  display: flex;
+  border: 1px solid #ccc;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-container .main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-container h1 {
+  margin: 20px 0 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.right-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  width: 360px;
+  height: 360px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.overlay p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
