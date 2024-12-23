@@ -1,0 +1,32 @@
+<div class="slider-section">
+    <div class="slider-container">
+        <img src="assets\images\Brands\google logo.png" alt="">
+        <p>REVIEWS</p>
+        <h2>Our Clients say</h2>
+        <div class="review-card">
+          <p class="review-text">
+            “{{ reviews[currentIndex].message }}”
+          </p>
+          <p class="review-author">- {{ reviews[currentIndex].author }}</p>
+        </div>
+      
+        <!-- Navigation Arrows -->
+        <div class="slider-controls">
+          <button (click)="prevReview()"><img src="assets/images/Vector1.png" alt=""></button>
+          <button (click)="nextReview()"><img src="assets/images/Vector.png" alt=""></button>
+        </div>
+      
+        <!-- Dots Indicator -->
+        <div class="dots">
+          <span 
+            *ngFor="let review of reviews; let i = index" 
+            class="dot" 
+            [class.active]="i === currentIndex" 
+            (click)="goToReview(i)">
+          </span>
+        </div>
+      
+        <button class="read-reviews-btn">READ REVIEWS</button>
+    </div>
+</div>
+  

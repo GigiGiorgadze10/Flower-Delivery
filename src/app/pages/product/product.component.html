@@ -1,0 +1,90 @@
+<div *ngIf="product" class="product-page">
+    <div class="left-container">
+      <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image" />
+    </div>
+    <div class="right-container">
+      <h1>{{ product.name }}</h1>
+      <p class="price">Price: {{ product.price }}$</p>
+      <p>{{ product.description }}</p>
+  
+      <!-- Quantity Section -->
+      <div class="quantity-container">
+        <label for="quantity">Quantity:</label>
+        <button (click)="decreaseQuantity()" class="quantity-btn">-</button>
+        <input id="quantity" type="text" [(ngModel)]="quantity" (change)="updateTotalPrice()" min="1" />
+        <button (click)="increaseQuantity()" class="quantity-btn">+</button>
+      </div>
+  
+      <!-- Vase Options Section -->
+      <div class="vase-options">
+        <h3>Excellent Combination with:</h3>
+        <ul>
+          <li *ngFor="let combination of product.combinations">
+            <label>
+              <input
+                type="radio"
+                [value]="combination"
+                [(ngModel)]="selectedVase"
+                (change)="onVaseChange()"
+                name="vase-option"
+              />
+              {{ combination.name }} - {{ combination.price }}$
+            </label>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Price Options -->
+      <div class="price-options">
+        <h3>Price Options:</h3>
+        <label>
+          <input
+            type="radio"
+            value="oneTime"
+            [(ngModel)]="priceOption"
+            (change)="onPriceOptionChange()"
+            name="priceOption"
+          />
+          One-time purchase. Price {{ product.price }}$
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="subscribe"
+            [(ngModel)]="priceOption"
+            (change)="onPriceOptionChange()"
+            name="priceOption"
+          />
+          Subscribe now and save 25% on this order.
+        </label>
+      </div>
+  
+      <!-- Total Price -->
+      <p class="total-price">Total Price: {{ totalPrice.toFixed(2) }}$</p>
+  
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+  
+  <div *ngIf="!product">
+    <p>Product not found.</p>
+  </div>
+  
+  <!-- Subscription Modal -->
+  <div *ngIf="isSubscriptionModalOpen" class="modal-overlay">
+    <div class="modal">
+      <h2>Subscribe to Save 25%</h2>
+      <p>Enter your email to subscribe and receive a welcome message:</p>
+      <input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="Your email"
+        required
+      />
+      <div class="modal-actions">
+        <button (click)="subscribe()" [disabled]="!email">Subscribe</button>
+        <button (click)="closeSubscriptionModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  

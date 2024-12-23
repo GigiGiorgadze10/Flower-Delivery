@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="header-container">
+    <nav class="menu-left">
+      <ul>
+        <li class="Shop">
+          <a (click)="navigate()">
+            {{ isCategoryPage ? 'Home' : 'Shop' }}
+          </a>
+        </li>
+        <li><a (click)="scrollToContact()">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="menu-right">
+      <ul>
+        <li class="SignIn"><a href="/signin">Sign In</a></li>
+        <li><a routerLink="/cart">Cart</a></li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+    <nav class="responsive-menu" [class.active]="menuOpen">
+      <ul>
+        <li>
+          <a (click)="navigate()">
+            {{ isCategoryPage ? 'Home' : 'Shop' }}
+          </a>
+        </li>
+        <li><a (click)="scrollToContact()">Contact</a></li>
+        <li><a href="/signin">Sign In</a></li>
+        <li><a href="/cart">Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

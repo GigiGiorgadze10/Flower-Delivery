@@ -1,0 +1,20 @@
+<!-- category.component.html -->
+<div class="main-container">
+  <div class="left-container">
+    <img src="assets/images/bee3ab6c9d71f6481d2b5e1b4636d51d.png" alt="Selected Category" class="main-image" />
+    <h1 class="title">Fresh Flowers</h1>
+  </div>
+  <!-- category.component.html -->
+<div class="right-container">
+  <div class="card" *ngFor="let product of products" (click)="viewProduct(product.id)">
+    <div class="image-container">
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <div class="overlay">
+        <h3>{{ product.name }}</h3>
+        <p>Price: {{ product.price }}$</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

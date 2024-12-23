@@ -1,0 +1,316 @@
+.third-section{
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex; 
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .left-square{
+        width: 720px;
+        height: 580px;
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        background: #fff;
+
+        h1{
+            padding-top: 50px;
+            padding-left: 50px;
+            font-size: 50px;
+            font-family: sans-serif;
+        }
+    }
+
+    .right-squares-third{
+        width: 724px;
+        height: 580px;
+        border-right: 1px solid #000000;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+
+        .right-square{
+            gap: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h2{
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+    
+        h1{
+            font-size: 38px;
+            font-family: sans-serif;
+        }
+    
+        p{
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+    
+        button{
+            width: 175px;
+            height: 56px;
+            font-size: 16px;
+            font-family: sans-serif;
+            background: none;
+        }
+    }
+
+}
+
+.fourth-section{
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex; /* Use Flexbox for side-by-side layout */
+  }
+
+  .left-square{
+    width: 720px;
+    height: 1239px;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    background: #fff;
+
+    h1{
+        padding-top: 50px;
+        padding-left: 50px;
+        font-size: 50px;
+        font-family: sans-serif;
+    }
+  }
+
+
+  .right-side{
+    max-height: 1240px;
+    display: flex;
+    flex-direction: column;
+
+
+    .right-squares-fourth {
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid black;
+      background: #fff;
+      width: 721px;
+      height: 310px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+    
+      h1 {
+        font-size: 38px;
+        font-family: sans-serif;
+      }
+    
+      p {
+        font-size: 16px;
+        font-family: sans-serif;
+        line-height: 1.5; /* Add line spacing for better readability */
+      }
+    }
+    
+  }
+}
+  
+
+.fifth-section{
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex; /* Use Flexbox for side-by-side layout */
+  }
+
+
+  .left-square{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 719px;
+    
+    .first {
+      width: 717px;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+      height: 359px;
+      gap: 30px;
+    
+      h1 {
+        font-size: 50px;
+        font-family: sans-serif;
+        text-align: center; /* Ensure text aligns in the center */
+      }
+    
+      p {
+        font-size: 18px;
+        font-family: sans-serif;
+        text-align: center; /* Ensure text aligns in the center */
+      }
+    
+      div {
+        display: flex;
+        gap: 15px;
+    
+        input {
+          height: 52px;
+          width: 253px;
+          padding-left: 15px;
+          font-size: 14px;
+          font-family: sans-serif;
+        }
+    
+        button {
+          height: 56px;
+          width: 272px;
+          background-color: #000000;
+          color: #fff;
+          font-size: 16px;
+          font-family: sans-serif;
+          border: none;
+        }
+      }
+    }
+    
+
+    
+    .second {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+
+      .phone{
+        height: 78px;
+        width: 358px;
+        text-align: center;
+        border-right: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .address{
+        height: 78px;
+        width: 358px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    
+      h1 {
+        font-size: 38px;
+        font-family: sans-serif;
+      }
+
+      
+    }
+    
+
+    .third{
+      display: flex;
+      border: 1px solid black;
+
+      .third-left{
+        height: 280px;
+        width: 358px;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      .third-right{
+        height: 280px;
+        width: 358px;
+        border-left: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 16px;
+
+        p{
+          font-family: sans-serif;
+        }
+      }
+    }
+    
+  }
+
+  .right-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 720px;
+
+
+    .images img {
+      width: 720px; /* Set the width to 720px */
+      height: 640px; /* Set the height to 720px */
+      border-right: 1px solid black;
+      object-fit: cover; /* Ensure the image covers the dimensions while maintaining aspect ratio */
+      display: block; /* Ensure the image doesn't have extra inline spacing */
+    }
+
+    .second {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+
+      .phone{
+        height: 78px;
+        width: 359px;
+        text-align: center;
+        border-right: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .address{
+        height: 78px;
+        width: 360px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        display: flex;
+      }
+    
+      h1 {
+        font-size: 38px;
+        font-family: sans-serif;
+      }
+
+      
+    }
+  }
+}
