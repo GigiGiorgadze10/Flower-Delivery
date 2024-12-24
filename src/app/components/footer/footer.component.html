@@ -2,11 +2,20 @@
     <div class="container">
         <div class="first-container">
             <div class="first">
-                <p>Remember to offer beautiful flowers <br>from Kyiv LuxeBouquets Valentines <br>Day, Mothers Day, Christmas... <br>Reminds you 7 days before. No spam <br>or sharing your address</p>
-                <input type="email" placeholder="Your Email">
-                <button>REMIND</button>
+              <p>Remember to offer beautiful flowers <br>from Kyiv LuxeBouquets Valentines <br>Day, Mothers Day, Christmas... <br>Reminds you 7 days before. No spam <br>or sharing your address</p>
+              <form (ngSubmit)="sendReminder()" #reminderForm="ngForm">
+                <input
+                  type="email"
+                  name="email"
+                  [(ngModel)]="userEmail"
+                  placeholder="Your Email"
+                  required
+                  email
+                />
+                <button type="submit" [disabled]="!reminderForm.valid">REMIND</button>
+              </form>
             </div>
-        </div>
+          </div>
         <div class="second-container">
             <div class="second">
                 <h2>Contact Us</h2>

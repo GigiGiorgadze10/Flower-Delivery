@@ -1,0 +1,53 @@
+<div class="checkout-container">
+    <!-- Left Section -->
+    <div class="form-section">
+      <!-- Step 1: Contact Information -->
+      <form *ngIf="step === 1" (ngSubmit)="proceedToNextStep()">
+        <h2>1. Contact Information</h2>
+        <input type="text" [(ngModel)]="contactInfo.name" name="name" placeholder="Your Name" required />
+        <input type="email" [(ngModel)]="contactInfo.email" name="email" placeholder="Your Email" required />
+        <input type="tel" [(ngModel)]="contactInfo.phone" name="phone" placeholder="Your Phone number" required />
+        <button type="submit">Continue to Shipping</button>
+      </form>
+  
+      <!-- Step 2: Shipping Details -->
+      <form *ngIf="step === 2" (ngSubmit)="proceedToNextStep()">
+        <h2>2. Shipping Details</h2>
+        <input type="text" [(ngModel)]="shippingInfo.address" name="address" placeholder="Address" required />
+        <input type="text" [(ngModel)]="shippingInfo.city" name="city" placeholder="City" required />
+        <input type="text" [(ngModel)]="shippingInfo.zip" name="zip" placeholder="ZIP Code" required />
+        <button type="submit">Continue to Payment</button>
+      </form>
+  
+      <!-- Step 3: Payment Information -->
+      <form *ngIf="step === 3" (ngSubmit)="handlePayment()">
+        <h2>3. Payment</h2>
+        <input type="text" [(ngModel)]="paymentInfo.cardNumber" name="cardNumber" placeholder="Card Number" required />
+        <input type="text" [(ngModel)]="paymentInfo.expiry" name="expiry" placeholder="Expiry Date" required />
+        <input type="text" [(ngModel)]="paymentInfo.cvv" name="cvv" placeholder="CVV" required />
+        <button type="submit">Pay Now</button>
+      </form>      
+    </div>
+  
+    <!-- Right Section -->
+    <div class="summary-section">
+      <h2>Order Summary</h2>
+      <div *ngFor="let item of cartItems" class="product-summary">
+        <img [src]="item.product.imageUrl" alt="Product Image" />
+        <p>{{ item.product.name }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        <p>Price: ${{ item.product.price }}</p>
+        <p>Subtotal: ${{ item.totalPrice }}</p>
+      </div>
+  
+      <div class="gift-card-section">
+        <input type="text" [(ngModel)]="giftCard" placeholder="Gift card" />
+        <button (click)="applyGiftCard()">Apply</button>
+      </div>
+  
+      <p>Subtotal: ${{ getSubtotal() }}</p>
+      <p>Shipping: Calculated at next step</p>
+      <h3>Total: ${{ getTotalPrice() }}</h3>
+    </div>
+  </div>
+  

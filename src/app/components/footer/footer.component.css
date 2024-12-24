@@ -43,6 +43,7 @@
             height: 52px;
             padding-left: 15px;
             font-size: 14px;
+            margin-left: 35px;
           }
           
           .first button {
@@ -53,6 +54,8 @@
             border: none;
             cursor: pointer;
             font-size: 16px;
+            margin-left: 35px;
+            margin-top: 10px;
           }
           
           .first button:hover {

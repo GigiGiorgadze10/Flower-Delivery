@@ -4,6 +4,7 @@ import { ProductService } from '../../services/product.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser'; // Import EmailJS
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -27,8 +28,26 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private cartService: CartService
   ) {}
+
+  addToCart() {
+    if (!this.product) return;
+  
+    const cartItem = {
+      product: this.product,
+      quantity: this.quantity,
+      vase: this.selectedVase,
+      priceOption: this.priceOption,
+      totalPrice: this.totalPrice,
+    };
+    console.log('Adding to cart:', cartItem);
+  
+    this.cartService.addToCart(cartItem);
+    alert('Product added to cart!');
+  }
+  
 
   ngOnInit() {
     const productId = this.route.snapshot.paramMap.get('id');
