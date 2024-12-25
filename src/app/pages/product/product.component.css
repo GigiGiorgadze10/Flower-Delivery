@@ -1,176 +1,209 @@
 /* General Product Page Styling */
 .product-page {
-    display: flex;
-    flex-direction: row; /* Keep this for larger screens */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1440px;
-    margin: 0 auto;
-    font-family: sans-serif;
-  }
-  
-  .left-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    width: 720px;
-    height: 720px;
-  }
-  
-  .right-container {
-    flex: 1;
-    padding-left: 20px;
-  }
-  
-  /* Quantity Section */
-  .quantity-container {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  #quantity {
-    width: 40px; /* Set width for consistency */
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 5px;
-    font-size: 16px;
-  }
-  
-  .quantity-btn {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 16px;
-    background-color: #ddd;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .quantity-btn:hover {
-    background-color: #ccc;
-  }
-  
-  /* Vase Options */
-  .vase-options ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .vase-options li {
-    margin-bottom: 10px;
-  }
-  
-  .vase-options input {
-    margin-right: 10px;
-  }
-  
-  /* Price Options */
-  .price-options {
-    margin-top: 20px;
-  }
-  
-  .price-options label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .price-options label input {
-    margin-right: 10px;
-  }
-  
-  /* Add to Cart Button */
-  .add-to-cart {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .add-to-cart:hover {
-    background-color: #45a049;
-  }
-  
-  /* Total Price */
-  .total-price {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  /* Modal Overlay */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Modal Window */
-  .modal {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 400px;
-  }
-  
-  .modal input {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Modal Actions */
-  .modal-actions button {
-    margin: 5px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .modal-actions button:first-child {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .modal-actions button:last-child {
-    background-color: #f44336;
-    color: white;
-  }
-  
-  /* Responsive Design (Mobile First) */
-  @media (max-width: 768px) {
-    .product-page {
-      flex-direction: column;
-    }
-  
-    .left-container {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .right-container {
-      width: 100%;
-      padding-left: 0;
-    }
-  
-    .modal {
-      width: 90%;
-      max-width: 400px;
-    }
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1438px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.left-container {
+  flex: 1;
+  max-width: 720px;
+  height: 720px;
+  border-right: 1px solid black;
+}
+
+.left-container img {
+  width: 716px;
+  height: 719px;
+}
+
+.right-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.right-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.right-container p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Quantity Section */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quantity-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: white;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #333;
+}
+
+.quantity-container input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Vase Options */
+.vase-options {
+  margin-bottom: 20px;
+}
+
+.vase-options h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.vase-options ul {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.vase-options li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vase-options input {
+  margin-top: 5px;
+}
+
+/* Price Options */
+.price-options {
+  margin-bottom: 20px;
+}
+
+.price-options h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.price-options label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.price-options input {
+  margin-right: 10px;
+}
+
+/* Total Price */
+.total-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  display: inline-block;
+  background-color: #000;
+  color: white;
+  font-size: 1rem;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Window */
+.modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  background-color: #000;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions button:hover {
+  background-color: #333;
+}

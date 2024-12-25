@@ -3,8 +3,7 @@
       <img [src]="product.imageUrl" alt="{{ product.name }}" class="product-image" />
     </div>
     <div class="right-container">
-      <h1>{{ product.name }}</h1>
-      <p class="price">Price: {{ product.price }}$</p>
+      <h1>{{ product.name }} - <span class="price">${{ product.price }}</span></h1>
       <p>{{ product.description }}</p>
   
       <!-- Quantity Section -->
