@@ -1,7 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { UserService } from '../../services/user.service'; // Import the UserService
 import emailjs from '@emailjs/browser';
 
 @Component({
@@ -23,19 +24,19 @@ export class CheckoutComponent implements OnInit {
   serviceId = 'service_2nxae4y';
   templateId = 'template_c6bygpb';
   publicKey = 'shm7w_v2E8Gnc2qQs';
+  userName: string | null = null; // Store signed-in user's name
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private userService: UserService) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
     console.log('Cart Items:', this.cartItems); // Debugging line
-    
-  }
 
-  deleteItem(item: any) {
-    this.cartService.removeFromCart(item);
-    this.cartItems = this.cartService.getCartItems(); // Update the cartItems array
-  }  
+    // Subscribe to user login status
+    this.userService.user$.subscribe(userName => {
+      this.userName = userName;
+    });
+  }
 
   proceedToNextStep() {
     if (this.step === 1) {
@@ -54,26 +55,32 @@ export class CheckoutComponent implements OnInit {
         return;
       }
     }
-  
+
     if (this.step < 3) {
       this.step++;
     }
   }
 
   handlePayment() {
+    // Check if the user is signed in
+    if (!this.userName) {
+      alert('You must sign in to proceed with the payment.');
+      return;
+    }
+
     // Validate payment details
     if (!this.paymentInfo.cardNumber || !this.paymentInfo.expiry || !this.paymentInfo.cvv) {
       alert('Please fill out all payment details.');
       return;
     }
-  
+
     // Simulate a successful payment
     alert('Payment successful! Thank you for your order.');
-  
+
     // Clear cart and show a thank you message
     this.cartService.clearCart();
     this.sendReceiptEmail();
-  
+
     // Go back to the first step or show a success page
     this.step = 1; // Or redirect to a "Thank You" page
   }
@@ -85,7 +92,7 @@ export class CheckoutComponent implements OnInit {
       items: this.cartItems.map(item => `${item.product.name} x${item.quantity}`).join(', '),
       total: this.getTotalPrice().toFixed(2),
     };
-  
+
     emailjs.send(this.serviceId, this.templateId, templateParams, this.publicKey)
       .then(response => {
         console.log('Receipt sent:', response);
@@ -96,9 +103,6 @@ export class CheckoutComponent implements OnInit {
         alert('Failed to send receipt. Please try again.');
       });
   }
-  
-  
-  
 
   applyGiftCard() {
     if (this.giftCard === 'DISCOUNT20' && !this.discountApplied) {
@@ -118,5 +122,11 @@ export class CheckoutComponent implements OnInit {
 
   getTotalPrice() {
     return this.discountApplied ? this.discountedTotal : this.getSubtotal();
+  }
+
+  // Method to delete an item from the cart
+  deleteItem(item: any) {
+    this.cartService.removeFromCart(item); // Remove from cart service
+    this.cartItems = this.cartService.getCartItems(); // Update the cartItems array
   }
 }
