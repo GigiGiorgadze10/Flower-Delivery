@@ -4,18 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CartService {
-  private cartItems: any[] = this.getStoredCart(); // Load initial data from localStorage
+  private cartItems: any[] = this.getStoredCart(); 
 
   addToCart(item: any) {
     this.cartItems.push(item);
-    this.saveCartToStorage(); // Save to localStorage
+    this.saveCartToStorage(); 
   }
 
   removeFromCart(item: any) {
     const index = this.cartItems.findIndex(cartItem => cartItem.product.id === item.product.id);
     if (index !== -1) {
       this.cartItems.splice(index, 1);
-      this.saveCartToStorage(); // Save to localStorage after removal
+      this.saveCartToStorage();
     }
   }  
 
@@ -25,7 +25,7 @@ export class CartService {
 
   clearCart() {
     this.cartItems = [];
-    this.saveCartToStorage(); // Clear localStorage
+    this.saveCartToStorage();
   }
 
   private saveCartToStorage() {

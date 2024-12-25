@@ -10,11 +10,11 @@ import emailjs from '@emailjs/browser';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  userEmail: string = ''; // Bind to input field
+  userEmail: string = ''; 
 
-  serviceId: string = 'service_xvlwaog'; // Replace with your EmailJS Service ID
-  templateId: string = 'template_g4udhrd'; // Replace with your EmailJS Template ID
-  publicKey: string = 'TtSx7sWPRO9tT1hfx'; // Replace with your EmailJS Public Key
+  serviceId: string = 'service_xvlwaog';
+  templateId: string = 'template_g4udhrd'; 
+  publicKey: string = 'TtSx7sWPRO9tT1hfx'; 
 
   async subscribe() {
     const templateParams = {

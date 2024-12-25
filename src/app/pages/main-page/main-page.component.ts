@@ -15,11 +15,11 @@ export class MainPageComponent {
   scrollToContact() {
     throw new Error('Method not implemented.');
   }
-  @ViewChild(InfoComponent) infoComponent!: InfoComponent;  // Access InfoComponent
+  @ViewChild(InfoComponent) infoComponent!: InfoComponent; 
 
   onContactClicked() {
     if (this.infoComponent) {
-      this.infoComponent.scrollToContact();  // Call scrollToContact method of InfoComponent
+      this.infoComponent.scrollToContact(); 
     }
   }
 

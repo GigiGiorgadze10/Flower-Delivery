@@ -1,7 +1,6 @@
 <div class="checkout-container">
-    <!-- Left Section -->
     <div class="form-section">
-      <!-- Step 1: Contact Information -->
+
       <form *ngIf="step === 1" (ngSubmit)="proceedToNextStep()">
         <h2>1. Contact Information</h2>
         <input type="text" [(ngModel)]="contactInfo.name" name="name" placeholder="Your Name" required />
@@ -10,7 +9,6 @@
         <button type="submit">Continue to Shipping</button>
       </form>
   
-      <!-- Step 2: Shipping Details -->
       <form *ngIf="step === 2" (ngSubmit)="proceedToNextStep()">
         <h2>2. Shipping Details</h2>
         <input type="text" [(ngModel)]="shippingInfo.address" name="address" placeholder="Address" required />
@@ -19,7 +17,6 @@
         <button type="submit">Continue to Payment</button>
       </form>
   
-      <!-- Step 3: Payment Information -->
       <form *ngIf="step === 3" (ngSubmit)="handlePayment()">
         <h2>3. Payment</h2>
         <input type="text" [(ngModel)]="paymentInfo.cardNumber" name="cardNumber" placeholder="Card Number" required />
@@ -29,7 +26,6 @@
       </form>      
     </div>
   
-    <!-- Right Section -->
     <div class="summary-section">
       <h2>Order Summary</h2>
       <div *ngFor="let item of cartItems" class="product-summary">
@@ -40,7 +36,6 @@
           <p>Price: ${{ item.product.price }}</p>
           <p>Subtotal: ${{ item.totalPrice }}</p>
         </div>
-        <!-- Delete Button -->
         <button class="delete-btn" (click)="deleteItem(item)">
           &times;
         </button>

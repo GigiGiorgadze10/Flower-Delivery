@@ -70,7 +70,7 @@
   .container {
     max-width: 1440px;
     margin: 0 auto;
-    display: flex; /* Use Flexbox for side-by-side layout */
+    display: flex; 
   }
 
   .left-square{
@@ -118,7 +118,7 @@
       p {
         font-size: 16px;
         font-family: sans-serif;
-        line-height: 1.5; /* Add line spacing for better readability */
+        line-height: 1.5;
       }
     }
     
@@ -130,7 +130,7 @@
   .container {
     max-width: 1440px;
     margin: 0 auto;
-    display: flex; /* Use Flexbox for side-by-side layout */
+    display: flex; 
   }
 
 
@@ -147,21 +147,21 @@
       border-bottom: 1px solid black;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Center content vertically */
-      align-items: center; /* Center content horizontally */
+      justify-content: center; 
+      align-items: center; 
       height: 359px;
       gap: 30px;
     
       h1 {
         font-size: 50px;
         font-family: sans-serif;
-        text-align: center; /* Ensure text aligns in the center */
+        text-align: center; 
       }
     
       p {
         font-size: 18px;
         font-family: sans-serif;
-        text-align: center; /* Ensure text aligns in the center */
+        text-align: center; 
       }
     
       div {
@@ -192,8 +192,8 @@
     
     .second {
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+      justify-content: center; 
+      align-items: center;
       border-left: 1px solid black;
       border-right: 1px solid black;
 
@@ -270,17 +270,17 @@
 
 
     .images img {
-      width: 720px; /* Set the width to 720px */
-      height: 640px; /* Set the height to 720px */
+      width: 720px; 
+      height: 640px;
       border-right: 1px solid black;
-      object-fit: cover; /* Ensure the image covers the dimensions while maintaining aspect ratio */
-      display: block; /* Ensure the image doesn't have extra inline spacing */
+      object-fit: cover; 
+      display: block;
     }
 
     .second {
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
+      justify-content: center; 
+      align-items: center; 
       border-top: 1px solid black;
       border-bottom: 1px solid black;
       border-right: 1px solid black;

@@ -12,19 +12,17 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent implements OnInit {
   menuOpen: boolean = false;
   isCategoryPage: boolean = false;
-  signedInUser: string | null = null; // Tracks the signed-in user
+  signedInUser: string | null = null; 
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Detect current route
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isCategoryPage = this.router.url === '/category';
       }
     });
 
-    // Load signed-in user data from localStorage
     this.signedInUser = localStorage.getItem('signedInUser');
   }
 
@@ -44,7 +42,6 @@ export class HeaderComponent implements OnInit {
   }
 
   signOut() {
-    // Clear user data and navigate to the sign-in page
     localStorage.removeItem('signedInUser');
     this.signedInUser = null;
     this.router.navigate(['/signin']);

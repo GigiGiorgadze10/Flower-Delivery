@@ -16,7 +16,6 @@ export class ReviewsSliderComponent implements OnInit {
   constructor(private reviewsService: ReviewsService) {}
 
   ngOnInit(): void {
-    // Load reviews dynamically from service
     this.reviews = this.reviewsService.getReviews();
   }
 

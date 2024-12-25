@@ -21,6 +21,6 @@ export class CategoryComponent implements OnInit {
   }
 
   viewProduct(productId: number) {
-    this.router.navigate(['/product', productId]);  // Navigate using product ID
+    this.router.navigate(['/product', productId]); 
   }
 }

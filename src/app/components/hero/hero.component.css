@@ -1,11 +1,10 @@
 .hero-section {
-
     .container {
       max-width: 1440px;
       margin: 0 auto;
-      display: flex; /* Use Flexbox for side-by-side layout */
-      justify-content: space-between; /* Add space between the containers */
-      align-items: flex-start; /* Align items at the top */
+      display: flex; 
+      justify-content: space-between;
+      align-items: flex-start; 
     }
   
     .left-square {
@@ -48,7 +47,7 @@
 
       .left-square-bottom {
         display: flex;
-        align-items: flex-end; /* Align content to the bottom */
+        align-items: flex-end;
       }
       
       .left-square-bottom img{
@@ -67,17 +66,17 @@
   
     .right-squares {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+      grid-template-columns: repeat(2, 1fr); 
       
       .square {
         width: 360px;
         height: 360px;
         border-right: 1px solid black;
         border-bottom: 1px solid black;
-        position: relative; /* Enables absolute positioning of child elements */
+        position: relative; 
         display: flex;
-        justify-content: center; /* Center the h1 horizontally */
-        align-items: center; /* Center the h1 vertically */
+        justify-content: center; 
+        align-items: center; 
         background: #fff;
         text-align: center;
         
@@ -89,7 +88,7 @@
         h1 {
           font-size: 38px;
           font-family: sans-serif;
-          position: absolute; /* Center using position */
+          position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -100,8 +99,8 @@
           font-family: sans-serif;
           font-size: 16px;
           font-weight: bold;
-          position: absolute; /* Place at the bottom */
-          bottom: 20px; /* Add spacing from the bottom */
+          position: absolute; 
+          bottom: 20px; 
           left: 50%;
           transform: translateX(-50%);
           text-decoration: none;
@@ -119,7 +118,7 @@
   
       .left-square,
       .right-squares .square {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
         height: auto;
       }
   
@@ -133,9 +132,9 @@
     .container {
       max-width: 1440px;
       margin: 0 auto;
-      display: flex; /* Use Flexbox for side-by-side layout */
-      justify-content: space-between; /* Add space between the containers */
-      align-items: flex-start; /* Align items at the top */
+      display: flex;
+      justify-content: space-between; 
+      align-items: flex-start;
     }
   
     .left-square-second {
@@ -154,49 +153,49 @@
   
     .right-squares-second {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+      grid-template-columns: repeat(2, 1fr); 
       
       .square {
         width: 360px;
         height: 360px;
         border-right: 1px solid black;
         border-bottom: 1px solid black;
-        position: relative; /* Enables absolute positioning of child elements */
+        position: relative;
         display: flex;
-        justify-content: center; /* Center the h1 horizontally */
-        align-items: center; /* Center the h1 vertically */
+        justify-content: center; 
+        align-items: center;
         background: #fff;
-        overflow: hidden; /* Ensure images don’t overflow the square */
+        overflow: hidden;
         text-align: center;
         
         img {
-          width: 100%; /* Make the image span the full width */
-          height: 100%; /* Make the image span the full height */
-          object-fit: cover; /* Ensures the image fills the square while maintaining aspect ratio */
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover; 
         }
   
         h1 {
           font-size: 38px;
           font-family: sans-serif;
-          position: absolute; /* Center using position */
+          position: absolute; 
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           white-space: nowrap;
-          z-index: 2; /* Ensure it appears on top of the image */
+          z-index: 2; 
         }
   
         a {
           font-family: sans-serif;
           font-size: 16px;
           font-weight: bold;
-          position: absolute; /* Place at the bottom */
-          bottom: 20px; /* Add spacing from the bottom */
+          position: absolute; 
+          bottom: 20px; 
           left: 50%;
           transform: translateX(-50%);
           text-decoration: none;
           color: #000000;
-          z-index: 2; /* Ensure it appears on top of the image */
+          z-index: 2;
         }
       }
     }

@@ -7,15 +7,15 @@ import { BehaviorSubject } from 'rxjs';
 export class UserService {
   private userSubject = new BehaviorSubject<string | null>(localStorage.getItem('signedInUser'));
 
-  user$ = this.userSubject.asObservable(); // Observable to subscribe to
+  user$ = this.userSubject.asObservable();
 
   setUser(userName: string): void {
     localStorage.setItem('signedInUser', userName);
-    this.userSubject.next(userName); // Update the user state
+    this.userSubject.next(userName); 
   }
 
   removeUser(): void {
     localStorage.removeItem('signedInUser');
-    this.userSubject.next(null); // Clear the user state
+    this.userSubject.next(null);
   }
 }

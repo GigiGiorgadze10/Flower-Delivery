@@ -1,9 +1,8 @@
-/* Set the page background to white and ensure it covers the full screen */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #fff; /* White background */
+    background-color: #fff; 
   }
   
   .login-container {
@@ -11,20 +10,19 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 900px;
-    width: 100%;  /* Full screen width */
-    background-color: #fff; /* White background */
+    width: 100%;
+    background-color: #fff; 
   }
   
   .login-wrapper {
-    width: 600px; /* Fixed form size */
+    width: 600px; 
     padding: 30px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for form */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
-  /* Header styling */
   .login-wrapper h1 {
     font-size: 50px;
     font-weight: bold;
@@ -38,7 +36,6 @@ body, html {
     color: #666;
   }
   
-  /* Form inputs */
   .form-group {
     margin-bottom: 15px;
   }
@@ -67,7 +64,6 @@ body, html {
     background-color: #333;
   }
   
-  /* Divider styling */
   .divider {
     margin: 20px 0;
     position: relative;
@@ -103,7 +99,6 @@ body, html {
     gap: 10px;
   }
   
-  /* Social login buttons */
   .social-login button {
     width: 100%;
     padding: 12px;
@@ -123,7 +118,6 @@ body, html {
     margin-right: 10px;
   }
   
-  /* Footer links */
   .footer-links {
     margin-top: 15px;
     font-size: 14px;
@@ -138,7 +132,6 @@ body, html {
     text-decoration: underline;
   }
   
-  /* Toggle Form Button */
 .toggle-form {
     margin-top: 15px;
   }

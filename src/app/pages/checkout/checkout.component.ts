@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
-import { UserService } from '../../services/user.service'; // Import the UserService
+import { UserService } from '../../services/user.service';
 import emailjs from '@emailjs/browser';
 
 @Component({
@@ -13,24 +13,24 @@ import emailjs from '@emailjs/browser';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  step: number = 1; // Current form step
+  step: number = 1;
   contactInfo = { name: '', email: '', phone: '' };
   shippingInfo = { address: '', city: '', zip: '' };
   paymentInfo = { cardNumber: '', expiry: '', cvv: '' };
-  cartItems: any[] = []; // Items from the cart
+  cartItems: any[] = []; 
   giftCard = '';
   discountApplied = false;
   discountedTotal = 0;
   serviceId = 'service_2nxae4y';
   templateId = 'template_c6bygpb';
   publicKey = 'shm7w_v2E8Gnc2qQs';
-  userName: string | null = null; // Store signed-in user's name
+  userName: string | null = null;
 
   constructor(private cartService: CartService, private userService: UserService) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
-    console.log('Cart Items:', this.cartItems); // Debugging line
+    console.log('Cart Items:', this.cartItems);
 
     // Subscribe to user login status
     this.userService.user$.subscribe(userName => {
@@ -62,27 +62,22 @@ export class CheckoutComponent implements OnInit {
   }
 
   handlePayment() {
-    // Check if the user is signed in
     if (!this.userName) {
       alert('You must sign in to proceed with the payment.');
       return;
     }
 
-    // Validate payment details
     if (!this.paymentInfo.cardNumber || !this.paymentInfo.expiry || !this.paymentInfo.cvv) {
       alert('Please fill out all payment details.');
       return;
     }
 
-    // Simulate a successful payment
     alert('Payment successful! Thank you for your order.');
 
-    // Clear cart and show a thank you message
     this.cartService.clearCart();
     this.sendReceiptEmail();
 
-    // Go back to the first step or show a success page
-    this.step = 1; // Or redirect to a "Thank You" page
+    this.step = 1; 
   }
 
   sendReceiptEmail() {
@@ -124,9 +119,8 @@ export class CheckoutComponent implements OnInit {
     return this.discountApplied ? this.discountedTotal : this.getSubtotal();
   }
 
-  // Method to delete an item from the cart
   deleteItem(item: any) {
-    this.cartService.removeFromCart(item); // Remove from cart service
-    this.cartItems = this.cartService.getCartItems(); // Update the cartItems array
+    this.cartService.removeFromCart(item); 
+    this.cartItems = this.cartService.getCartItems();
   }
 }

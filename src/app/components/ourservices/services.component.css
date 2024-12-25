@@ -14,20 +14,19 @@
       }
   }
   
-  
   .seventh-section{
     .container{
       max-width: 1440px;
       margin: 0 auto;
-      display: flex; /* Use Flexbox for side-by-side layout */
+      display: flex; 
     }
   
     .left-square img{
-      width: 720px; /* Set the width to 720px */
-      height: 640px; /* Set the height to 720px */
+      width: 720px; 
+      height: 640px; 
       border-right: 1px solid black;
-      object-fit: cover; /* Ensure the image covers the dimensions while maintaining aspect ratio */
-      display: block; /* Ensure the image doesn't have extra inline spacing */
+      object-fit: cover;
+      display: block;
     }
   
     .right-square{

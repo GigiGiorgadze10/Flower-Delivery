@@ -1,4 +1,3 @@
-/* General Product Page Styling */
 .product-page {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +38,6 @@
   margin-bottom: 20px;
 }
 
-/* Quantity Section */
 .quantity-container {
   display: flex;
   align-items: center;
@@ -72,7 +70,6 @@
   border-radius: 5px;
 }
 
-/* Vase Options */
 .vase-options {
   margin-bottom: 20px;
 }
@@ -100,7 +97,6 @@
   margin-top: 5px;
 }
 
-/* Price Options */
 .price-options {
   margin-bottom: 20px;
 }
@@ -121,7 +117,6 @@
   margin-right: 10px;
 }
 
-/* Total Price */
 .total-price {
   font-size: 1.5rem;
   font-weight: bold;
@@ -129,7 +124,6 @@
   margin-bottom: 20px;
 }
 
-/* Add to Cart Button */
 .add-to-cart {
   display: inline-block;
   background-color: #000;
@@ -149,7 +143,6 @@
   background-color: #333;
 }
 
-/* Modal Overlay */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -162,7 +155,6 @@
   align-items: center;
 }
 
-/* Modal Window */
 .modal {
   background: #fff;
   padding: 30px;

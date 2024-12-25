@@ -1,4 +1,3 @@
-// product.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -146,10 +145,8 @@ export class ProductService {
           { name: 'Bamboo', price: 35 },
         ],
       },
-    // More products here...
   ];
 
-  // This method fetches the product by its ID
   getProductById(id: number) {
     return this.products.find(product => product.id === id);
   }
