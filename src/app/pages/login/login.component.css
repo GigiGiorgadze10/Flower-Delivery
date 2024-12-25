@@ -10,7 +10,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full screen height */
+    height: 720px;
     width: 100%;  /* Full screen width */
     background-color: #fff; /* White background */
   }
