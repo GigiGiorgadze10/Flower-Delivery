@@ -31,7 +31,11 @@ export class CheckoutComponent implements OnInit {
     console.log('Cart Items:', this.cartItems); // Debugging line
     
   }
-  
+
+  deleteItem(item: any) {
+    this.cartService.removeFromCart(item);
+    this.cartItems = this.cartService.getCartItems(); // Update the cartItems array
+  }  
 
   proceedToNextStep() {
     if (this.step === 1) {

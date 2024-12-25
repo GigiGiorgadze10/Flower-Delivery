@@ -34,17 +34,23 @@
       <h2>Order Summary</h2>
       <div *ngFor="let item of cartItems" class="product-summary">
         <img [src]="item.product.imageUrl" alt="Product Image" />
-        <p>{{ item.product.name }}</p>
-        <p>Quantity: {{ item.quantity }}</p>
-        <p>Price: ${{ item.product.price }}</p>
-        <p>Subtotal: ${{ item.totalPrice }}</p>
+        <div>
+          <p>{{ item.product.name }}</p>
+          <p>Quantity: {{ item.quantity }}</p>
+          <p>Price: ${{ item.product.price }}</p>
+          <p>Subtotal: ${{ item.totalPrice }}</p>
+        </div>
+        <!-- Delete Button -->
+        <button class="delete-btn" (click)="deleteItem(item)">
+          &times;
+        </button>
       </div>
-  
+    
       <div class="gift-card-section">
         <input type="text" [(ngModel)]="giftCard" placeholder="Gift card" />
         <button (click)="applyGiftCard()">Apply</button>
       </div>
-  
+    
       <p>Subtotal: ${{ getSubtotal() }}</p>
       <p>Shipping: Calculated at next step</p>
       <h3>Total: ${{ getTotalPrice() }}</h3>

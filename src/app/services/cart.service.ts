@@ -11,6 +11,14 @@ export class CartService {
     this.saveCartToStorage(); // Save to localStorage
   }
 
+  removeFromCart(item: any) {
+    const index = this.cartItems.findIndex(cartItem => cartItem.product.id === item.product.id);
+    if (index !== -1) {
+      this.cartItems.splice(index, 1);
+      this.saveCartToStorage(); // Save to localStorage after removal
+    }
+  }  
+
   getCartItems() {
     return this.cartItems;
   }
