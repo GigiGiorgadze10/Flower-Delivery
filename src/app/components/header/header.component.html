@@ -13,7 +13,13 @@
 
     <nav class="menu-right">
       <ul>
-        <li class="SignIn"><a href="/signin">Sign In</a></li>
+        <!-- Conditionally display Sign In or user's name -->
+        <li class="SignIn">
+          <a *ngIf="!signedInUser" href="/signin">Sign In</a>
+          <span *ngIf="signedInUser" class="user-name">
+            Welcome, {{ signedInUser }} <a (click)="signOut()">Sign Out</a>
+          </span>
+        </li>
         <li><a href="/checkout">Cart</a></li>
       </ul>
     </nav>
@@ -27,7 +33,12 @@
           </a>
         </li>
         <li><a (click)="scrollToContact()">Contact</a></li>
-        <li><a href="/signin">Sign In</a></li>
+        <li>
+          <a *ngIf="!signedInUser" href="/signin">Sign In</a>
+          <span *ngIf="signedInUser" class="user-name">
+            Welcome, {{ signedInUser }} <a (click)="signOut()">Sign Out</a>
+          </span>
+        </li>
         <li><a href="/checkout">Cart</a></li>
       </ul>
     </nav>

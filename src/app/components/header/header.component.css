@@ -135,3 +135,8 @@
     }
   }
   
+  .user-name{
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }

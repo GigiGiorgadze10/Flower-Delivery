@@ -5,55 +5,35 @@
     <p *ngIf="isSignInMode">Use your email and password to log in</p>
     <p *ngIf="!isSignInMode">Create your account using email and password</p>
 
-    <form *ngIf="isSignInMode">
+    <form *ngIf="isSignInMode" (ngSubmit)="handleSignIn(email.value, password.value)">
       <div class="form-group">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          required
-        />
+        <input type="email" #email placeholder="Enter your email" required />
       </div>
       <div class="form-group">
-        <input
-          type="password"
-          placeholder="Enter your password"
-          required
-        />
+        <input type="password" #password placeholder="Enter your password" required />
       </div>
       <button type="submit" class="continue-btn">Sign In</button>
     </form>
 
-    <form *ngIf="!isSignInMode">
+    <form *ngIf="!isSignInMode" (ngSubmit)="handleSignUp(name.value, email.value, password.value, confirmPassword.value)">
       <div class="form-group">
-        <input
-          type="text"
-          placeholder="Enter your name"
-          required
-        />
+        <input type="text" #name placeholder="Enter your name" required />
       </div>
       <div class="form-group">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          required
-        />
+        <input type="email" #email placeholder="Enter your email" required />
       </div>
       <div class="form-group">
-        <input
-          type="password"
-          placeholder="Create your password"
-          required
-        />
+        <input type="password" #password placeholder="Create your password" required />
       </div>
       <div class="form-group">
-        <input
-          type="password"
-          placeholder="Confirm your password"
-          required
-        />
+        <input type="password" #confirmPassword placeholder="Confirm your password" required />
       </div>
       <button type="submit" class="continue-btn">Sign Up</button>
     </form>
+
+    <div *ngIf="errorMessage" style="color: red; margin-top: 10px;">
+      {{ errorMessage }}
+    </div>
 
     <div class="toggle-form">
       <p *ngIf="isSignInMode">
